@@ -36,12 +36,11 @@ blockquote {
   <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-hide-large" href="javascript:openCity(event, 'HOME')" onclick="w3_close()"><img src="/favicon.ico" height="20" alt="Emoji">&nbsp;Emoji's Site</a>
   <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
   <a class="w3-bar-item w3-button w3-teal bt HOME" href="javascript:openCity(event, 'HOME')" onclick="w3_close()" id="bHOME">About Emoji</a>
-  <a class="w3-bar-item w3-button bt T1" href="javascript:openCity(event, 'T1')" onclick="w3_close()" id="bT1">Minetest</a>
-  <a class="w3-bar-item w3-button bt WP" href="javascript:openCity(event, 'WP')" onclick="w3_close()" id="bWP">Wikipedia</a>
+  <a class="w3-bar-item w3-button bt T1" href="javascript:openCity(event, 'T1')" onclick="w3_close()" id="bT1">Minetest Servers</a>
   <a class="w3-bar-item w3-button bt T2" href="javascript:openCity(event, 'T2')" onclick="w3_close()" id="bT2">Other Tools</a>
-  <a class="w3-bar-item w3-button bt T3" href="javascript:openCity(event, 'T3')" onclick="w3_close()" id="bT3">My Mottos</a>
+  <!--<a class="w3-bar-item w3-button bt T3" href="javascript:openCity(event, 'T3')" onclick="w3_close()" id="bT3">Other Hosted Services</a>-->
   <a class="w3-bar-item w3-button bt T4" href="javascript:openCity(event, 'T4')" onclick="w3_close()" id="bT4">License and Thanks</a>
-  <div class="w3-bar-item w3-button bt w3-border-top" onclick="w3_close()">Copyright (c) 2020 Cato Yiu<br>Under CC BY-SA 4.0</div>
+  <div class="w3-bar-item w3-button bt w3-border-top" onclick="w3_close()">Copyright (c) 2020 Cato Yiu<br>Under <a href="https://creativecommons.org/licenses/by-sa/4.0/deed">CC BY-SA 4.0</a></div>
   <!--<div>
     <a class="w3-bar-item w3-button" onclick="myAccordion('demo')" href="javascript:void(0)">Dropdown <i class="fa fa-caret-down"></i></a>
     <div id="demo" class="w3-hide">
@@ -69,6 +68,15 @@ blockquote {
 <div class="w3-container tabcontent" style="padding:32px;display:block" id="HOME">
   <h2>About Emoji</h2>
   <p>Emoji is a people like emojis, also known as Cato.</p>
+  <h3>Wikimedia Account</h3>
+  <p>Emoji's Wikimedia account is <a href="https://zhwp.org/U:Emojiwiki">Emojiwiki</a>.</p>
+  <h3>Minetest Accounts</h3>
+  <p>Emoji usually uses "Cato" as his name. Sometimes he uses "OhNo" too.</p>
+  <h3>My Mottos</h3>
+  <ul class="w3-leftbar w3-theme-border" style="list-style:none">
+    <li><blockquote><a href="https://en.wikipedia.org/wiki/Don%27t_be_evil">Don't be evil.</a></blockquote>—— Google</li>
+    <li><blockquote><a href="https://en.wiktionary.org/wiki/%E5%B7%B1%E6%89%80%E4%B8%8D%E6%AC%B2%EF%BC%8C%E5%8B%BF%E6%96%BD%E6%96%BC%E4%BA%BA">Don't do unto others what you don't want done unto you.</a></blockquote>—— Confucius</li>
+  </ul>
 </div>
 
 <div class="w3-container tabcontent" style="padding:32px" id="T1">
@@ -76,11 +84,6 @@ blockquote {
   <p><a href="https://github.com/minetest/minetest">Minetest</a> is a game engine for various games which usually play in an open world made out of cubes, inspired by Infiniminer, Minecraft, and the like. We use this game engine to provide a free, stable and funny playing envionment.</p>
   <h3>More Infomation</h3>
   <p>For more infomation, see <a href="/mts">https://toyshost2.ddns.net/mts/</a></p>
-</div>
-
-<div class="w3-container tabcontent" style="padding:32px" id="WP">
-  <h2>Wikimedia Account</h2>
-  <p>Emoji's Wikimedia account is <a href="https://zhwp.org/U:Emojiwiki">Emojiwiki</a>.</p>
 </div>
 
 <div class="w3-container tabcontent" style="padding:32px" id="T2">
@@ -96,13 +99,11 @@ blockquote {
   </ul>
 </div>
 
+<!--
 <div class="w3-container tabcontent" style="padding:32px" id="T3">
-  <h2>My Mottos</h2>
-  <ul class="w3-leftbar w3-theme-border" style="list-style:none">
-    <li><blockquote><a href="https://en.wikipedia.org/wiki/Don%27t_be_evil">Don't be evil.</a></blockquote>—— Google</li>
-    <li><blockquote><a href="https://en.wiktionary.org/wiki/%E5%B7%B1%E6%89%80%E4%B8%8D%E6%AC%B2%EF%BC%8C%E5%8B%BF%E6%96%BD%E6%96%BC%E4%BA%BA">Don't do unto others what you don't want done unto you.</a></blockquote>—— Confucius</li>
-  </ul>
+
 </div>
+-->
 
 <div class="w3-container tabcontent" style="padding:32px" id="T4">
   <h2>License and Thanks</h2>
@@ -165,9 +166,9 @@ function myAccordion(id) {
   if (x.className.indexOf("w3-show") == -1) {
     x.className += " w3-show";
     x.previousElementSibling.className += " w3-theme";
-  } else { 
+  } else {
     x.className = x.className.replace("w3-show", "");
-    x.previousElementSibling.className = 
+    x.previousElementSibling.className =
     x.previousElementSibling.className.replace(" w3-theme", "");
   }
 }
@@ -206,6 +207,6 @@ function openCity(evt, cityName) {
 
 }
 </script>
-     
+
 </body>
-</html> 
+</html>
