@@ -6,10 +6,11 @@
 <meta charset="utf-8">
 <meta name="og:title" content="Emoji's Site">
 <meta name="og:image" content="https://toyshost2.ddns.net/main/logo-ogp.png">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-teal.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><style>
+<link rel="preload stylesheet" href="/main/w3.css">
+<link rel="preload stylesheet" href="/main/w3-theme-teal.css">
+<link rel="stylesheet" href="/main/roboto.css" media="none" onload="if(media!='all')media='all'">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'">
+<style>
 body {font-family: "Roboto", sans-serif}
 .w3-bar-block .w3-bar-item {
   padding: 16px;
@@ -32,8 +33,8 @@ blockquote {
 <body>
 
 <nav class="w3-sidebar w3-bar-block w3-collapse w3-animate-left w3-card" style="z-index:3;width:250px;" id="mySidebar">
-  <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-hide-small w3-hide-medium" href="javascript:openCity(event, 'HOME')" onclick="w3_close()"><img src="/favicon.ico" style="width:90%;" alt="Emoji"></a>
-  <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-hide-large" href="javascript:openCity(event, 'HOME')" onclick="w3_close()"><img src="/favicon.ico" height="20" alt="Emoji">&nbsp;Emoji's Site</a>
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-hide-small w3-hide-medium" href="javascript:openCity(event, 'HOME')" onclick="w3_close()"><img src="/favicon.ico" style="width:90%;" alt="Emoji" loading="lazy"></a>
+  <a class="w3-bar-item w3-button w3-border-bottom w3-large w3-hide-large" href="javascript:openCity(event, 'HOME')" onclick="w3_close()"><img src="/favicon.ico" height="20" alt="Emoji" loading="lazy">&nbsp;Emoji's Site</a>
   <a class="w3-bar-item w3-button w3-hide-large w3-large" href="javascript:void(0)" onclick="w3_close()">Close <i class="fa fa-remove"></i></a>
   <a class="w3-bar-item w3-button w3-teal bt HOME" href="javascript:openCity(event, 'HOME')" onclick="w3_close()" id="bHOME">About Emoji</a>
   <a class="w3-bar-item w3-button bt T1" href="javascript:openCity(event, 'T1')" onclick="w3_close()" id="bT1">Minetest Servers</a>
@@ -122,10 +123,7 @@ blockquote {
 </div>
 </div>
 
-<script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>
 // Open and close the sidebar on medium and small screens
 function w3_open() {
